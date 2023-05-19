@@ -4,7 +4,8 @@ const path = require('path');
 const fs = require('fs');
 
 // retrieve db notes
-const notes = require('./db/db.json')
+const notes = require('./db/db.json');
+const { log } = require('console');
 
 // start the express app
 const app = express();
@@ -28,13 +29,28 @@ app.get('/api/notes', (req, res) => {
 })
 
 app.post('/api/notes', (req, res) => {
+    // define variable for the scope
+    var dbArray;
     console.log(req.body)
-    let { title, text } = req.body;
-    data = JSON.stringify(req.body)
+    fs.readFile('./db/db.json', (error, fileData) => {
+        // turn the read file into a json arrray
+        dbArray = JSON.parse(fileData);
+        console.log(dbArray)
+        // push the request object into the array
+        dbArray.push(req.body);
+        // turn the whole array back into a string
+        console.log(dbArray);
+        dbArray = JSON.stringify(dbArray);
+    })
+    console.log(dbArray)
 
-    fs.appendFile('./db/db.json', data, (err) => {
+    fs.writeFile('./db/db.json', dbArray, (err) => {
         err ? console.log(err) : console.log('Data written to db.json')
     })
+
+    // fs.appendFile('./db/db.json', data, (err) => {
+    //     err ? console.log(err) : console.log('Data written to db.json')
+    // })
 })
 
 app.listen(PORT, () => {
