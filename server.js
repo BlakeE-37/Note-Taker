@@ -9,7 +9,7 @@ const notes = require('./db/db.json');
 
 // start the express app
 const app = express();
-const port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 //middlewares
 app.use(express.static('public'));
