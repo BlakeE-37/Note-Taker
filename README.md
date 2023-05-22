@@ -15,7 +15,7 @@ This is a web application that uses express.js to handle GET and POST request. T
 To install the application, go to the github repository at [this link](https://github.com/BlakeE-37/Note-Taker), and clone the repository.
 
 ## Usage
-To use the app you can clone the repository and run the app locally or you can go to the hosted site at [this link](https://peaceful-castle-40527.herokuapp.com/notes). To use the app press the 'Get Started' button to be taken to the applications main screen. Then in the right hand column type in a Title and Text for your note and a save button will appear, press this button to save your note. Click on the note in the left hand column to see the Text for your note.
+To use the app you can clone the repository and run the app locally or you can go to the hosted site at [this link](https://peaceful-castle-40527.herokuapp.com). To use the app press the 'Get Started' button to be taken to the applications main screen. Then in the right hand column type in a Title and Text for your note and a save button will appear, press this button to save your note. Click on the note in the left hand column to see the Text for your note.
 
 ![App Screenshot](./public/images/application-screenshot.png)
 
