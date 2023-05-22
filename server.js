@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs').promises;
+const uniqid = require('uniqid');
 
 // retrieve db notes
 const notes = require('./db/db.json');
@@ -54,6 +55,7 @@ function readAndReturn(newNote) {
 }
 
 app.post('/api/notes', async (req, res) => {
+    req.body.id = uniqid();
     await readAndReturn(req.body)
     res.end()
 
