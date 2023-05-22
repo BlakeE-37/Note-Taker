@@ -19,6 +19,12 @@ To use the app you can clone the repository and run the app locally or you can g
 
 ![App Screenshot](./public/images/application-screenshot.png)
 
+
+## Helpfull Links 
+[Heroku Deployment](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide)
+
+- Some code was corrected or added with the help of my tutor **Andrew Tirpok**
+
 ## License
 [none]()
 
